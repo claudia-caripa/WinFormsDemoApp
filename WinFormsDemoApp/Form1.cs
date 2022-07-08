@@ -16,5 +16,13 @@ namespace WinFormsDemoApp
         {
 
         }
+
+        private void lstCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string city = (string)lstCity.SelectedItem;
+            MessageBox.Show("Selected city {0}", city);
+           
+
+        }
     }
 }

@@ -101,6 +101,7 @@
             this.lstCity.Name = "lstCity";
             this.lstCity.Size = new System.Drawing.Size(300, 209);
             this.lstCity.TabIndex = 2;
+            this.lstCity.SelectedIndexChanged += new System.EventHandler(this.lstCity_SelectedIndexChanged);
             // 
             // rbMale
             // 
@@ -146,7 +147,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(63, 760);
+            this.btnSubmit.Location = new System.Drawing.Point(747, 711);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(188, 58);
             this.btnSubmit.TabIndex = 7;
