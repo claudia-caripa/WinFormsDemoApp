@@ -17,11 +17,22 @@ namespace WinFormsDemoApp
 
         }
 
+        //Event Handling for ListBox lstCity
         private void lstCity_SelectedIndexChanged(object sender, EventArgs e)
         {
             string city = (string)lstCity.SelectedItem;
-            MessageBox.Show("Selected city {0}", city);
+            MessageBox.Show("Selected city: " + city);
            
+
+        }
+
+        //Event Handling for Submit button btnSubmit
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            string name = txtName.Text;
+            string address = txtAddress.Text;
+
+            MessageBox.Show("Welcome " + name + ";" +"\nLocation: " + address);
 
         }
     }
