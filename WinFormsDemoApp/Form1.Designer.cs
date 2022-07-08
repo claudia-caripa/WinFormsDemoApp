@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Label");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Button");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Checkbox");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Root", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gbUserDetails = new System.Windows.Forms.GroupBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -39,7 +47,13 @@
             this.chkC = new System.Windows.Forms.CheckBox();
             this.chkASP = new System.Windows.Forms.CheckBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.lblListBox = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.lblTutorial = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbUserDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbUserDetails
@@ -97,7 +111,7 @@
             "Buenos Aires",
             "Bogota",
             "Dublin"});
-            this.lstCity.Location = new System.Drawing.Point(63, 423);
+            this.lstCity.Location = new System.Drawing.Point(48, 384);
             this.lstCity.Name = "lstCity";
             this.lstCity.Size = new System.Drawing.Size(300, 209);
             this.lstCity.TabIndex = 2;
@@ -106,7 +120,7 @@
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(747, 82);
+            this.rbMale.Location = new System.Drawing.Point(720, 93);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(120, 45);
             this.rbMale.TabIndex = 3;
@@ -117,7 +131,7 @@
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(747, 142);
+            this.rbFemale.Location = new System.Drawing.Point(720, 153);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(150, 45);
             this.rbFemale.TabIndex = 4;
@@ -128,7 +142,7 @@
             // chkC
             // 
             this.chkC.AutoSize = true;
-            this.chkC.Location = new System.Drawing.Point(747, 423);
+            this.chkC.Location = new System.Drawing.Point(724, 413);
             this.chkC.Name = "chkC";
             this.chkC.Size = new System.Drawing.Size(93, 45);
             this.chkC.TabIndex = 5;
@@ -138,7 +152,7 @@
             // chkASP
             // 
             this.chkASP.AutoSize = true;
-            this.chkASP.Location = new System.Drawing.Point(748, 507);
+            this.chkASP.Location = new System.Drawing.Point(725, 497);
             this.chkASP.Name = "chkASP";
             this.chkASP.Size = new System.Drawing.Size(163, 45);
             this.chkASP.TabIndex = 6;
@@ -147,7 +161,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(747, 711);
+            this.btnSubmit.Location = new System.Drawing.Point(725, 645);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(188, 58);
             this.btnSubmit.TabIndex = 7;
@@ -155,11 +169,69 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(1105, 262);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Node1";
+            treeNode1.Text = "Label";
+            treeNode2.Name = "Node3";
+            treeNode2.Text = "Button";
+            treeNode3.Name = "Node4";
+            treeNode3.Text = "Checkbox";
+            treeNode4.Name = "Node0";
+            treeNode4.Text = "Root";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode4});
+            this.treeView1.Size = new System.Drawing.Size(232, 222);
+            this.treeView1.TabIndex = 8;
+            // 
+            // lblListBox
+            // 
+            this.lblListBox.AutoSize = true;
+            this.lblListBox.Location = new System.Drawing.Point(48, 340);
+            this.lblListBox.Name = "lblListBox";
+            this.lblListBox.Size = new System.Drawing.Size(69, 41);
+            this.lblListBox.TabIndex = 9;
+            this.lblListBox.Text = "City";
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Location = new System.Drawing.Point(720, 35);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(116, 41);
+            this.lblGender.TabIndex = 10;
+            this.lblGender.Text = "Gender";
+            // 
+            // lblTutorial
+            // 
+            this.lblTutorial.AutoSize = true;
+            this.lblTutorial.Location = new System.Drawing.Point(718, 340);
+            this.lblTutorial.Name = "lblTutorial";
+            this.lblTutorial.Size = new System.Drawing.Size(118, 41);
+            this.lblTutorial.TabIndex = 11;
+            this.lblTutorial.Text = "Tutorial";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1105, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(223, 222);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 1003);
+            this.ClientSize = new System.Drawing.Size(1377, 794);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblTutorial);
+            this.Controls.Add(this.lblGender);
+            this.Controls.Add(this.lblListBox);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.chkASP);
             this.Controls.Add(this.chkC);
@@ -172,6 +244,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gbUserDetails.ResumeLayout(false);
             this.gbUserDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +263,10 @@
         private CheckBox chkC;
         private CheckBox chkASP;
         private Button btnSubmit;
+        private TreeView treeView1;
+        private Label lblListBox;
+        private Label lblGender;
+        private Label lblTutorial;
+        private PictureBox pictureBox1;
     }
 }
